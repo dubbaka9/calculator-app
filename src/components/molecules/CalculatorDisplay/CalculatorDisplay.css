@@ -1,0 +1,14 @@
+.calculator-display {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 2rem;
+    text-align: right;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.calculator-display--result {
+    color: #007bff;
+}
