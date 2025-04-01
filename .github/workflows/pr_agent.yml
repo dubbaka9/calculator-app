@@ -11,9 +11,6 @@ jobs:
       pull-requests: write
       contents: write
     name: Run pr agent on every pull request, respond to user comments
-    ai:
-      model: claude-3-opus
-      provider: openai
     steps:
       - name: PR Agent action step
         id: pragent
