@@ -5,7 +5,7 @@ const Button: React.FC<{
 }> = ({ label, onClick, style }) => {
   return (
     <button className="button" onClick={onClick} style={style}>
-      {label}
+      {label} "-QodoTest"
     </button>
   );
 };
