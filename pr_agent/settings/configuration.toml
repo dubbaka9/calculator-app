@@ -1,5 +1,5 @@
       env:
         # ... previous environment values
         OPENAI.ORG: "PRAgent"
-        PR_REVIEWER.REQUIRE_TESTS_REVIEW: "true" # Disable tests review
-        PR_CODE_SUGGESTIONS.NUM_CODE_SUGGESTIONS: 6 # Increase number of code suggestions
+        # PR_REVIEWER.REQUIRE_TESTS_REVIEW: "true" # Disable tests review
+        # PR_CODE_SUGGESTIONS.NUM_CODE_SUGGESTIONS: 6 # Increase number of code suggestions
