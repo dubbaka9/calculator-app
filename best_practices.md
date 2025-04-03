@@ -21,3 +21,9 @@
 - Use lazy loading for components not needed on initial render
 - Implement proper error boundaries
 - Create well-documented custom hooks for reusable logic
+
+## Testing
+- Write and update unit tests for all components and utilities
+- Test accessibility features
+- Test error boundaries and edge cases
+- Ensure proper test coverage for critical paths
