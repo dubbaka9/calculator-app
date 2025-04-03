@@ -8,7 +8,7 @@ interface CalculatorDisplayProps {
 const CalculatorDisplay: React.FC<CalculatorDisplayProps> = ({ result }) => {
     return (
         <div className="calculator-display">
-            <input type="text" value={result} readOnly />
+            <input type="text" value={result + 1} readOnly />
         </div>
     );
 };
