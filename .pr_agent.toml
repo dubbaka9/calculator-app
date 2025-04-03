@@ -8,12 +8,9 @@ description = "Whenever any link in the code is updated"
 [custom_labels."Code Update"]
 description = "Whenever any code is updated"
 
-# [best_practices]
-# organization_name = "Sindhuja Dubbaka"
-# enable_global_best_practices = true
+[best_practices]
+enable_global_best_practices = true
 
-[best_practices.organization_name] 
- description= "Sindhuja Dubbaka"
 
 
 
