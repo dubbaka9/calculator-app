@@ -7,7 +7,7 @@ const Addition: React.FC = () => {
     const [result, setResult] = useState<number | null>(null);
 
     const handleCalculation = (value: number) => {
-        setResult(prevResult => (prevResult !== null ? prevResult + value : value));
+        setResult(prevResult => (prevResult !== null ? prevResult + value + 2 : value + 2 ));
     };
 
     return (
