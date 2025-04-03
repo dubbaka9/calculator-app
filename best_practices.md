@@ -1,3 +1,6 @@
+[best_practices]
+ organization_name = "Sindhuja Dubbaka"
+ 
 # [React]
 
 - Use semantic HTML elements (nav, header, main, footer, etc.)
