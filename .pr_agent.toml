@@ -1,5 +1,6 @@
 [config]
 enable_custom_labels = true
+enable_global_best_practices = true
 
 [custom_labels."Link Update"]
 description = "Whenever any link in the code is updated"
@@ -8,5 +9,4 @@ description = "Whenever any link in the code is updated"
 description = "Whenever any code is updated"
 
 [best_practices]
-enable_global_best_practices = true
 organization_name = "Sindhuja Dubbaka"
