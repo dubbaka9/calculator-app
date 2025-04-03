@@ -10,3 +10,11 @@ description = "Whenever any code is updated"
 
 [best_practices]
 organization_name = "Sindhuja Dubbaka"
+enable_global_best_practices = true
+
+
+[github_app]
+pr_commands = [
+    "/improve",
+    ...
+]
