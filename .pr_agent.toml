@@ -11,115 +11,6 @@ description = "Whenever any code is updated"
 [best_practices]
 organization_name = "Sindhuja Dubbaka"
 enable_global_best_practices = true
-  # PR Agent Configuration for Test Coverage Enforcement
-# This configuration ensures that every changed code file has a corresponding test file change
-
-[general]
-log_level = "INFO"
-use_colors = true
-
-[pr_reviewer]
-enable = true
-require_tests_for_modified_code = true
-
-# Add the test coverage reviewer to the list of reviewers
-reviewers = ["test_coverage"]
-
-[test_coverage]
-# Enable the test coverage reviewer
-enabled = true
-
-# File extensions to check for test coverage
-file_extensions = [".js", ".jsx", ".ts", ".tsx"]
-
-# Define the mapping patterns for test files
-# {dir} = directory of the source file
-# {name} = filename without extension
-test_file_patterns = [
-    # Jest-style patterns
-    "{dir}/__tests__/{name}.test{ext}",
-    "{dir}/__tests__/{name}.spec{ext}",
-    
-    # Root test directory patterns
-    "tests/{dir}/{name}.test{ext}",
-    "tests/{dir}/{name}.spec{ext}",
-    "test/{dir}/{name}.test{ext}",
-    "test/{dir}/{name}.spec{ext}",
-    
-    # Relative test directory patterns
-    "{dir}/../tests/{name}.test{ext}",
-    "{dir}/../tests/{name}.spec{ext}"
-]
-
-# Paths that are exempted from test coverage requirements
-exempted_paths = [
-    # Configuration files
-    "config/",
-    "*.config.js",
-    "*.config.ts",
-    
-    # Type definitions
-    "types/",
-    "*.d.ts",
-    
-    # Build artifacts
-    "dist/",
-    "build/",
-    
-    # Assets and static files
-    "assets/",
-    "public/",
-    
-    # Dependencies
-    "node_modules/",
-    
-    # Documentation
-    "docs/",
-    "*.md",
-    
-    # CI/CD configuration
-    ".github/",
-    ".circleci/"
-]
-
-# Enforce test update when implementation changes
-require_test_update = true
-
-# Review settings
-review_comment_prefix = "📋 Test Coverage Review"
-missing_test_emoji = "❌"
-valid_test_emoji = "✅"
-
-# Review thresholds 
-fail_threshold = 0  # Fail if any required test is missing
-warn_threshold = 0  # Warn even if a single test is missing
-
-[test_coverage.pr_comment]
-add_comment = true
-comment_title = "## Test Coverage Review"
-comment_success_message = "All modified files have corresponding test coverage. Great job! 🎉"
-comment_failure_template = """
-The following files are missing test coverage:
-
-{missing_tests}
-
-Please add tests for these files before merging.
-"""
-
-[test_coverage.reporter]
-# How to report the results
-summary_in_pr = true  # Add a summary to the PR
-inline_comments = true  # Add inline comments to specific files
-status_check = true  # Add a GitHub status check
-
-[test_coverage.status_check]
-name = "Test Coverage"
-success_description = "All changed files have test coverage"
-failure_description = "Some changed files are missing test coverage"
-
-[test_coverage.actions]
-# Whether to block PR merge if test coverage requirement is not met
-block_merge = true
 
 
 [github_app]
@@ -128,5 +19,6 @@ pr_commands = [
    "/generate-best-practices,
    /explain
 ]
+
 
 
