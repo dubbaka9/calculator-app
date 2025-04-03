@@ -1,5 +1,3 @@
-[best_practices]
- organization_name = "Sindhuja Dubbaka"
  
 # [React]
 
