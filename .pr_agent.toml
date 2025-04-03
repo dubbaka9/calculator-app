@@ -9,6 +9,4 @@ description = "Whenever any code is updated"
 
 [best_practices]
 enable_global_best_practices = true
-
-[best_practices]
- organization_name = "Sindhuja Dubbaka"
+organization_name = "Sindhuja Dubbaka"
