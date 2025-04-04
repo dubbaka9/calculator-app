@@ -1,6 +1,5 @@
 [config]
 enable_custom_labels = true
-enable_best_practices = true
 
 [custom_labels."Link Update"]
 description = "Whenever any link in the code is updated"
@@ -8,8 +7,20 @@ description = "Whenever any link in the code is updated"
 [custom_labels."Code Update"]
 description = "Whenever any code is updated"
 
+[custom_labels."Tests"]
+description = "Adds or modifies tests"
+
+[pr_reviewer]
+enable_review_labels_effort = true
+
+
+[pr_code_suggestions]
+focus_only_on_problems = true
+
 [best_practices]
 enable_global_best_practices = true
+organization_name = "My Own space - Dubbaka"
+
 
 
 
