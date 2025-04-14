@@ -15,15 +15,15 @@ description = "Adds or modifies tests"
 # enable_review_labels_effort = true
 
 
-[pr_code_suggestions]
-focus_only_on_problems = true
+# [pr_code_suggestions]
+# focus_only_on_problems = true
 
 [best_practices]
 enable_global_best_practices = true
 organization_name = "My Own space - Dubbaka"
 
 
-[pr_reviewer]
+[pr_code_suggestions]
 extra_instructions = """
 # Extra Instructions for React Application Merge/PR Process
 
