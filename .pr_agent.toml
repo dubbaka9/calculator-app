@@ -1,5 +1,6 @@
 [config]
 enable_custom_labels = true
+output_relevant_configurations = true
 
 [custom_labels."Link Update"]
 description = "Whenever any link in the code is updated"
@@ -10,16 +11,36 @@ description = "Whenever any code is updated"
 [custom_labels."Tests"]
 description = "Adds or modifies tests"
 
-[pr_reviewer]
-enable_review_labels_effort = true
+ [pr_reviewer]
+extra_instructions = """\
+- Always check if PR contains `test` files
+...
+"""
 
-
-[pr_code_suggestions]
-focus_only_on_problems = true
 
 [best_practices]
 enable_global_best_practices = true
 organization_name = "My Own space - Dubbaka"
+
+
+[pr_code_suggestions]
+extra_instructions = """\
+
+## Unit Test Requirements
+- Every script file change must have a corresponding unit test file in the **same directory**
+- Unit test files must follow the naming convention:
+  - For TypeScript files: `filename.spec.ts` or `filename.spec.tsx`
+  - For JavaScript files: `filename.test.js` or `filename.test.jsx`
+
+  Examples:
+  ```
+  src/components/Button.tsx → src/components/Button.spec.tsx
+  src/utils/format.ts → src/utils/format.spec.ts
+  src/hooks/useAuth.js → src/hooks/useAuth.test.js
+  ```
+- If a file is refactored but logic remains unchanged, the corresponding test file should still be updated to match any new signatures or implementations.
+...
+"""
 
 
 
