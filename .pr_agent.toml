@@ -11,8 +11,11 @@ description = "Whenever any code is updated"
 [custom_labels."Tests"]
 description = "Adds or modifies tests"
 
-# [pr_reviewer]
-# enable_review_labels_effort = true
+ [pr_reviewer]
+extra_instructions = """\
+- Always check if PR contains `test` files
+...
+"""
 
 
 [best_practices]
@@ -21,7 +24,7 @@ organization_name = "My Own space - Dubbaka"
 
 
 [pr_code_suggestions]
-extra_instructions = """
+extra_instructions = """\
 
 ## Unit Test Requirements
 - Every script file change must have a corresponding unit test file in the **same directory**
@@ -36,6 +39,7 @@ extra_instructions = """
   src/hooks/useAuth.js → src/hooks/useAuth.test.js
   ```
 - If a file is refactored but logic remains unchanged, the corresponding test file should still be updated to match any new signatures or implementations.
+...
 """
 
 
