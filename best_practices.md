@@ -1,14 +1,10 @@
-<!-- ## Project best practices
-- For change in each `{filename}.ts/tsx` file, PR has to contain change in `filename}.spec.ts/tsx` -->
+extra_instructions = """
+# Extra Instructions for React Application Merge/PR Process
 
-#### Definition
+## Branch Naming Convention
+- All source branches **must** follow the format:
+  - Feature branches: `feat/<JIRA-TICKET>-*` (e.g., `feat/PROJ-123-user-authentication`)
+  - Bug fix branches: `bugfix/<JIRA-TICKET>-*` (e.g., `bugfix/PROJ-456-fix-login-error`)
+- The merge request will be automatically rejected if the branch naming convention is not followed.
 
-My Own space best practices for unit test cases.
-
-####  Decision
-
-- Place test files in the same directory as the component or function they test.
-- Use `component.spec.ts`  naming conventions
-- PRs modifying files under `src/` should also include changes under same folder.
-- Automated checks will block PRs that modify code without corresponding test updates.
-
+"""
