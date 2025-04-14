@@ -15,9 +15,6 @@ description = "Adds or modifies tests"
 # enable_review_labels_effort = true
 
 
-# [pr_code_suggestions]
-# focus_only_on_problems = true
-
 [best_practices]
 enable_global_best_practices = true
 organization_name = "My Own space - Dubbaka"
@@ -25,13 +22,6 @@ organization_name = "My Own space - Dubbaka"
 
 [pr_code_suggestions]
 extra_instructions = """
-# Extra Instructions for React Application Merge/PR Process
-
-## Branch Naming Convention
-- All source branches **must** follow the format:
-  - Feature branches: `feat/<JIRA-TICKET>-*` (e.g., `feat/PROJ-123-user-authentication`)
-  - Bug fix branches: `bugfix/<JIRA-TICKET>-*` (e.g., `bugfix/PROJ-456-fix-login-error`)
-- The merge request will be automatically rejected if the branch naming convention is not followed.
 
 ## Unit Test Requirements
 - Every script file change must have a corresponding unit test file in the **same directory**
