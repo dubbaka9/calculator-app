@@ -11,9 +11,15 @@ const Addition: React.FC = () => {
     };
 
     return (
-        <div className="addition-container">
+        <div 
+            className="addition-container"
+            role="main"
+            aria-label="Addition Calculator"
+        >
             <h1>Addition</h1>
-            <CalculatorDisplay result={result} />
+            <div role="region" aria-live="polite">
+                <CalculatorDisplay result={result?.toString() || ''} />
+            </div>
             <CalculatorKeypad onButtonClick={handleCalculation} />
         </div>
     );

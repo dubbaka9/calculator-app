@@ -11,12 +11,33 @@ const CalculatorKeypad: React.FC<{ onButtonClick: (value: string) => void }> = (
     ];
 
     return (
-        <div className="calculator-keypad">
+        <div 
+            className="calculator-keypad"
+            role="grid"
+            aria-label="Calculator Keypad"
+        >
             {buttons.map((label) => (
-                <Button key={label} label={label} onClick={() => onButtonClick(label)} />
+                <Button 
+                    key={label} 
+                    label={label} 
+                    onClick={() => onButtonClick(label)}
+                    aria-label={getAriaLabel(label)}
+                />
             ))}
         </div>
     );
+};
+
+const getAriaLabel = (label: string): string => {
+    const labels: Record<string, string> = {
+        '+': 'Add',
+        '-': 'Subtract',
+        '*': 'Multiply',
+        '/': 'Divide',
+        '=': 'Equals',
+        '.': 'Decimal point'
+    };
+    return labels[label] || `Number ${label}`;
 };
 
 export default CalculatorKeypad;
