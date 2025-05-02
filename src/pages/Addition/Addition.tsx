@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CalculatorDisplay from '../../components/molecules/CalculatorDisplay/CalculatorDisplay';
 import CalculatorKeypad from '../../components/organisms/CalculatorKeypad/CalculatorKeypad';
+import CalculatorHistory from '../../components/molecules/CalculatorHistory/CalculatorHistory';
+import useCalculator from '../../hooks/useCalculator';
 import './Addition.css';
 
 const Addition: React.FC = () => {
-    const [result, setResult] = useState<number | null>(null);
-
-    const handleCalculation = (value: number) => {
-        setResult(prevResult => (prevResult !== null ? prevResult + value : value));
-    };
+    const { result, history, handleCalculation } = useCalculator();
 
     return (
         <div className="addition-container">
             <h1>Addition</h1>
-            <CalculatorDisplay result={result} />
+            <CalculatorDisplay result={result?.toString() || ''} />
             <CalculatorKeypad onButtonClick={handleCalculation} />
+            <CalculatorHistory history={history} />
         </div>
     );
 };
