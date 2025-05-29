@@ -5,6 +5,7 @@ interface CalculatorDisplayProps {
     result: string;
 }
 
+console.log('CalculatorDisplay component loaded');
 const CalculatorDisplay: React.FC<CalculatorDisplayProps> = ({ result }) => {
     return (
         <div className="calculator-display">
@@ -13,4 +14,4 @@ const CalculatorDisplay: React.FC<CalculatorDisplayProps> = ({ result }) => {
     );
 };
 
-export default CalculatorDisplay;
+export default CalculatorDisplay;export default CalculatorDisplay;export default CalculatorDisplay;export default CalculatorDisplay;export default CalculatorDisplay;export default CalculatorDisplay;export default CalculatorDisplay;export default CalculatorDisplay;

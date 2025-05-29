@@ -10,6 +10,7 @@ const CalculatorKeypad: React.FC<{ onButtonClick: (value: string) => void }> = (
         '0', '.', '=', '+'
     ];
 
+ const accountToken="Bearerbjsdhskbfjsncksdsdkjslksjdl8833e3hkjhdeue738he3iue3i"
     return (
         <div className="calculator-keypad">
             {buttons.map((label) => (

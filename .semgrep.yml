@@ -1,0 +1,50 @@
+rules:
+  - id: react-missing-key-prop
+    pattern: |
+      <$EL {...$PROPS} />
+    message: Missing key prop in React element
+    languages: [javascript, typescript, jsx, tsx]
+    severity: WARNING
+    
+  - id: console-log-in-production
+    pattern: console.log(...)
+    message: Remove console.log statements before production
+    languages: [javascript, typescript]
+    severity: INFO
+
+  - id: jsx-xss-detect
+    pattern: |
+      <*$TAG $PROPS dangerouslySetInnerHTML={...} />
+    message: Potential XSS vulnerability via dangerouslySetInnerHTML in JSX
+    languages: [javascript, typescript, jsx, tsx]
+    severity: ERROR
+
+  - id: typescript-unused-import
+    pattern: import $X from $Y
+    message: Unused import detected (manual review required)
+    languages: [typescript, tsx]
+    severity: WARNING
+
+  - id: no-console-log
+    pattern: console.log(...)
+    message: Avoid using console.log in production code.
+    languages: [typescript]
+    severity: WARNING
+
+   - id: unused-import
+    pattern: import $X from $Y
+  ...
+  not $X
+      message: Unused import detected.
+      languages: [typescript]
+      severity: WARNING
+
+   - id: missing-key-prop
+    pattern: <$COMPONENT ...>
+   <$CHILD ... />
+ </$COMPONENT>
+    message: Possible missing key prop in list rendering.
+    languages: [typescript]
+    severity: WARNING
+
+
